@@ -15,7 +15,7 @@ const spaceAge = (seconds) => {
 
   for (let planet in yearsInAllPlanets) {
     yearsInAllPlanets[planet] =
-      years /
+       parseFloat((years /
       (planet === "Earth"
         ? 1
         : planet === "Mercury"
@@ -32,7 +32,7 @@ const spaceAge = (seconds) => {
         ? 84.016846
         : planet === "Neptune"
         ? 164.79132
-        : 0);
+        : 0)).toFixed(2));
   }
 
   return yearsInAllPlanets;
